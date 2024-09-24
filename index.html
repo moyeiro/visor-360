@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor 360</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000;
+        }
+        #panorama {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <!-- Pannellum library -->
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+</head>
+<body>
+
+<div id="panorama"></div>
+
+<script>
+    pannellum.viewer('panorama', {
+        "type": "equirectangular",
+        "panorama": "URL_DE_TU_IMAGEN_360",  <!-- Cambia esta URL por la ruta de tu imagen -->
+        "autoLoad": true,
+        "showControls": true
+    });
+</script>
+
+</body>
+</html>
